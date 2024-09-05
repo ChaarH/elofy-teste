@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\Api\LoginController;
-use App\Http\Controllers\Auth\Api\UserController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,16 +18,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('auth')->group(function () {
     Route::post('login', [LoginController::class, 'login']);
-});
-
-Route::get('teste', function() {
-
-    $string = 'arara';
-
-    $palindromo = false;
-
-    for ($i = 0; $i <= count($string); $i++) {
-        echo $string[$i];
-    }
-
+//    Route::post('login', [UserController::class, 'login']);
 });
