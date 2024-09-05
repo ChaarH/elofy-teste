@@ -20,4 +20,14 @@ Route::prefix('auth')->group(function () {
     Route::post('login', [LoginController::class, 'login']);
 });
 
-Route::resource('user', UserController::class);
+Route::get('teste', function() {
+
+    $string = 'arara';
+
+    $palindromo = false;
+
+    for ($i = 0; $i <= count($string); $i++) {
+        echo $string[$i];
+    }
+
+});
